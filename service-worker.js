@@ -1,41 +1,4 @@
-// const CACHE_NAME = "stroop-test-cache-v1";
-// const urlsToCache = [
-//   "/",
-//   "/main.html",
-//   "/assets/manifest.json",
-//   "/mozgani.js",
-// ];
-
-// self.addEventListener('install', event => {
-//   event.waitUntil(
-//     caches.open(CACHE_NAME)
-//       .then(cache => cache.addAll(urlsToCache))
-//   );
-// });
-
-// self.addEventListener('fetch', event => {
-//   event.respondWith(
-//     caches.match(event.request)
-//       .then(response => response || fetch(event.request))
-//   );
-// });
-
-// self.addEventListener('activate', event => {
-//   const cacheWhitelist = [CACHE_NAME];
-//   event.waitUntil(
-//     caches.keys().then(keyList =>
-//       Promise.all(
-//         keyList.map(key => {
-//           if (!cacheWhitelist.includes(key)) {
-//             return caches.delete(key);
-//           }
-//         })
-//       )
-//     )
-//   );
-// });
-
-const CACHE_NAME = `stroop-test-cache-v1`;
+CACHE_NAME = `stroop-test-cache-v1`;
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {

@@ -17,7 +17,10 @@
 		}
 		#main_container {
 			width: 100%;
-			max-width: 600px;
+			height: 100%;
+			max-height: 800px;
+/*			600*/
+			max-width: 1000px;
 			border: 2px solid #333;
 			padding: 20px;
 			box-sizing: border-box;
@@ -26,20 +29,21 @@
 		}
 		#small_screen {
 			border: 2px dashed #888;
-			padding: 110px;
+			padding: 200px;
 			margin-bottom: 40px;
 			background-color: #000;
 			color: #fff;
 		}
 		#word_display {
-			font-size: 2.3em;
+			font-weight: bold;
+			font-size: 5em;
 			margin: 15px 0;
 		}
 		#results {
 			margin-top: 20px;
 		}
 		#color_buttons button {
-			font-size: 1.5em;
+			font-size: 2em;
 			padding: 15px 20px;
 			margin: 10px;
 			border-radius: 5px;
@@ -54,7 +58,7 @@
 				<button onclick="stroopTest.check_response('gray')">S</button>
 				<button onclick="stroopTest.check_response('orange')">O</button>
 				<button onclick="stroopTest.check_response('blue')">M</button>
-				<button onclick="stroopTest.check_response('red')">R</button>
+				<button onclick="stroopTest.check_response('yellow')">R</button>
 			</div>
 		</div>
 		<div id="results">

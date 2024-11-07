@@ -54,8 +54,8 @@ class StroopTest
 	#small_screen;
 	#correct_avg_display;
 	#incorrect_avg_display;
-	#words = ["Siva", "Oranžna", "Modra", "Rdeča"];
-	#colors = ["gray", "orange", "blue", "red"];
+	#words = ["SIVA", "ORANŽNA", "MODRA", "RUMENA"];
+	#colors = ["gray", "orange", "blue", "yellow"];
 	#correct_times = [];
 	#incorrect_times = [];
 	#current_color;
