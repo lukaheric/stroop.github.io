@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stroop PWA</title>
+	<link rel="manifest" href="/assets/manifest.json">
+	<style>
+		body, html {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		#main_container {
+			width: 100%;
+			max-width: 600px;
+			border: 2px solid #333;
+			padding: 20px;
+			box-sizing: border-box;
+			background: #fff;
+			text-align: center;
+		}
+		#small_screen {
+			border: 2px dashed #888;
+			padding: 110px;
+			margin-bottom: 40px;
+			background-color: #000;
+			color: #fff;
+		}
+		#word_display {
+			font-size: 2.3em;
+			margin: 15px 0;
+		}
+		#results {
+			margin-top: 20px;
+		}
+		#color_buttons button {
+			font-size: 1.5em;
+			padding: 15px 20px;
+			margin: 10px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main_container">
+		<div id="small_screen">
+			<div id="word_display"></div>
+			<div id="color_buttons">
+				<button onclick="stroopTest.check_response('gray')">S</button>
+				<button onclick="stroopTest.check_response('orange')">O</button>
+				<button onclick="stroopTest.check_response('blue')">M</button>
+				<button onclick="stroopTest.check_response('red')">R</button>
+			</div>
+		</div>
+		<div id="results">
+			<p>Pravilno; povprečni čas: <span id="correct_avg">0</span> ms</p>
+			<p>Napačno; povprečni čas: <span id="incorrect_avg">0</span> ms</p>
+		</div>
+	</div>
+
+<script src="mozgani.js"></script>
+<!-- <script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/service-worker.js')
+				.then(registration => {
+					console.log('Service Worker registered:', registration);
+				})
+				.catch(error => {
+					console.log('Service Worker registration failed:', error);
+				});
+		});
+	}
+</script> -->
+<script>
+	if('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/sw.js', { scope: '/' });
+	}
+</script>
+
+</body>
+</html>
